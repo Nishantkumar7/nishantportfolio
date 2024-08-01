@@ -7,86 +7,95 @@
     <link rel="stylesheet" href="./src/input.css">
     <link rel="stylesheet" href="./src/output.css">
     <link rel="stylesheet" href="./src/styles.css">
-    <title>Document</title>
+    <title>Nishant's Portfolio</title>
 </head>
 
-<body class="font-roboto">
+<body>
+
+    <!-------------------nav bar -------------------------->
     <header>
         <nav id="nav"
-            class="px-4 flex-col justify-start relative transition-all duration-500 sm:static items-start py-4 bg-navy-blue text-slate-400 sm:h-min flex sm:justify-between sm:items-center sm:flex-row font-playfair font-bold">
-            <div class="logo cursor-pointer flex items-center w-full justify-between sm:w-1/3">
-                <img src="./src/images/logo.png" class="w-12" alt="logo" />
-                <!-- <h1 class="w-12 font-bold text-3xl text-white -tracking-wide">N.K.</h1> -->
-                <span id="toggle" onclick="handletoggle()" class="sm:hidden">
-                    <i class="fa fa-solid fa-bars"> </i>
-                </span>
+            class="flex flex-col justify-start relative transition-all duration-300 items-start px-4 py-4 bg-navy-blue text-[#dbdbdb] dark:bg-sky-50 dark:text-slate-900 sm:static sm:h-min sm:justify-between sm:items-center sm:flex-row font-playfair font-bold">
+            <div class="flex items-center w-full justify-between sm:w-1/3">
+                <img src="./src/images/logo.png" class="w-12 cursor-pointer dark:hidden" alt="logo" />
+                <img src="./src/images/logodark.png" class="w-12 cursor-pointer hidden dark:block" alt="logo" />
+                <div class="sm:hidden">
+                    <button id="hamburger" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <!-- nav items -->
+
             <ul id="navItem"
-                class="flex flex-col my-4 gap-4 left-[-200px] absolute top-16 sm:static justify-center sm:w-1/3 sm:flex-row sm:my-0">
-                <li class="hover:text-highlight transition-all duration-500">
+                class="hidden flex-col my-4 gap-4 justify-center sm:static sm:flex sm:w-1/3 sm:flex-row sm:my-0 font-playfair">
+                <li class="hover:text-highlight dark:hover:text-ree transition-all duration-300">
                     <a href="#home">Home</a>
                 </li>
-                <li class="hover:text-highlight transition-all duration-500">
+                <li class="hover:text-highlight dark:hover:text-ree transition-all duration-300">
                     <a href="#about">About</a>
                 </li>
-                <li class="hover:text-highlight transition-all duration-500">
+                <li class="hover:text-highlight dark:hover:text-ree transition-all duration-300">
                     <a href="#skills">Skills</a>
                 </li>
-                <li class="hover:text-highlight transition-all duration-500">
+                <li class="hover:text-highlight dark:hover:text-ree transition-all duration-300">
                     <a href="#services">Services</a>
                 </li>
-                <li class="hover:text-highlight transition-all duration-500">
+                <li class="hover:text-highlight dark:hover:text-ree transition-all duration-300">
                     <a href="#projects">Projects</a>
                 </li>
-                <li class="hover:text-highlight transition-all duration-500">
+                <li class="hover:text-highlight dark:hover:text-ree transition-all duration-300">
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
-            <!-- nav search and toggle btn -->
-            <div id="navSearch"
-                class="flex gap-2 justify-center items-center search absolute left-[-200px] sm:w-1/3 sm:static"
-                >
-                <!-- <input type="text" placeholder="Search"
-                    class="px-2 outline-none border-none bg-slate-800 py-1 rounded-md" /> -->
 
-                <div id="themeToggle" class="switch hidden sm:flex">
-                    <input type="checkbox" id="check" />
-                    <label for="check" id="check-btn"></label>
+            <div id="darktheme" class="hidden sm:flex gap-2 justify-center items-center sm:w-1/3">
+                <div>
+                    <input id="t-btn" class="t-btn" type="checkbox">
+                    <label for="t-btn" class="t-btn-label border-[#00e5ff] dark:border-[#ff0000]">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <span class="t-b"></span>
+                    </label>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section id="home" class="flex flex-col sm:flex-row bg-navy-blue sm:min-h-screen px-4 sm:px-12 text-white hp">
-            <div class="content py-16 xs:py-32 sm:my-auto">
-                <h2 class="text-xl xs:text-3xl md:text-4xl lg:text-6xl xl:text-7xl">Hello, It's Me</h2>
-                <h1 class="text-3xl xs:text-4xl md:text-6xl lg:text-7xl xl:text-8xl glow font-roboto-slab">Nishant
-                        Kumar
+
+        <!--------------------------------- Home Section ----------------------------------------->
+
+        <section id="home" class="flex flex-col sm:flex-row bg-navy-blue sm:min-h-screen px-4 sm:px-12 text-white hp dark:bg-sky-50 dark:text-black">
+            <div class="py-16 xs:py-32 sm:my-auto">
+                <h2 class="text-xl xs:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-caudex">Hello, It's Me</h2>
+                <h1 class="text-3xl xs:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-besley glow dark:text-[#990000]">Nishant
+                    Kumar
                 </h1>
-                <h2 class="text-2xl xs:text-3xl md:text-4xl xl:text-5xl font-josefin-sans py-4 md:py-8">
-                    A MERN Stack Web Developer
-                </h2>
-                <div class="icons flex gap-4 pb-4 md:pb-8">
-                    <a href="https://www.linkedin.com/in/nishant-kumar-2235b21a4/" target="_blank"
-                        class="fab fa-linkedin border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full"></a>
-                    <a href="https://github.com/Nishantkumar7" target="_blank"
-                        class="fab fa-github border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full"></a>
+                <p class="text-sm xs:text-xl md:text-xl xl:text-2xl py-4 md:py-8 font-caudex">
+                    Elevating Web Experiences as a Full Stack MERN Developer
+                </p>
+                <div class="flex gap-4 pb-4 md:pb-8">
+                    <a href="https://www.linkedin.com" target="_blank"
+                        class="fab fa-linkedin border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full dark:text-ree dark:border-ree"></a>
+                    <a href="https://github.com" target="_blank"
+                        class="fab fa-github border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full dark:text-ree dark:border-ree"></a>
                     <a href="mailto:niskum2002@gmail.com" target="_blank"
-                        class="fa fa-envelope border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full"></a>
-                    <a 
-                        class="fab fa-instagram border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full"></a>
+                        class="fa fa-envelope border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full dark:text-ree dark:border-ree"></a>
+                    <a href="https://www.instagram.com" target="_blank"
+                        class="fab fa-instagram border-2 cursor-pointer text-highlight border-highlight p-2 rounded-full dark:text-ree dark:border-ree"></a>
                 </div>
                 <button
-                    class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-highlight font-bold transition-all duration-500 text-highlight hover:text-black hover:bg-highlight">
+                    class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-full border-highlight dark:border-white font-bold transition-all duration-300 text-highlight dark:text-white hover:text-black dark:hover:text-ree hover:bg-highlight dark:hover:bg-sky-50 dark:bg-ree dark:hover:border-ree">
                     Download Resume
                 </button>
             </div>
             <div class="m-auto relative">
                 <div class="outer w-56 h-56 sm:w-73 sm:h-73">
-                    <div class="outerCircle">
-                        <div class="middleCircle">
-                            <div class="innerCircle">
+                    <div class="outerCircle border-[#00e5ff] dark:border-[#ff0000]">
+                        <div class="middleCircle border-[#00e5ff] dark:border-[#ff0000]">
+                            <div class="innerCircle border-[#00e5ff] dark:border-[#ff0000]">
                                 <div class="html"><img src="./src/images/html.png" alt="html-img"></div>
                                 <div class="css"><img src="./src/images/css.png" alt="css-img"></div>
                                 <div class="js"><img src="./src/images/js.png" alt="js-img"></div>
@@ -102,134 +111,149 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
+        <!---------------------------- About Section --------------------------->
+
         <section id="about"
-            class="flex flex-col-reverse gap-4 sm:flex-row bg-navy-blue sm:min-h-screen px-4 sm:px-12 text-white pb-72 sm:pb-10">
-            <div class="content-img m-auto relative w-full sm:w-[50%]">
-                
-                    <div class="about-outer ml-[9%] w-56 h-56 sm:m-auto sm:mt-[10%] xl:mt-[-42%] xl:w-73 xl:h-73 xl:ml-[17%]">
-                        <div class="about-outerCircle">
-                            <div class="about-react"><img src="./src/images/react.png" alt="react-img"></div>
-                            <div class="about-mongodb"><img src="./src/images/about-m.png" alt="mongodb-img"></div>
-                            <div class="express"><img src="./src/images/express.png" alt="express-img"></div>
-                            <div class="about-node"><img src="./src/images/node.png" alt="node-img"></div>
-                        </div>
-    
+            class="flex flex-col-reverse gap-4 sm:flex-row bg-navy-blue dark:bg-sky-50 sm:min-h-screen px-4 sm:px-12 text-white dark:text-black pb-72 sm:pb-10">
+            <div class="m-auto relative w-full sm:w-[50%]">
+
+                <div
+                    class="about-outer ml-[9%] w-56 h-56 sm:m-auto sm:mt-[10%] xl:mt-[-42%] xl:w-73 xl:h-73 xl:ml-[17%]">
+                    <div class="about-outerCircle">
+                        <div class="about-react"><img src="./src/images/react.png" alt="react-img"></div>
+                        <div class="about-mongodb"><img src="./src/images/about-m.png" alt="mongodb-img"></div>
+                        <div class="express"><img src="./src/images/express.png" alt="express-img"></div>
+                        <div class="about-node"><img src="./src/images/node.png" alt="node-img"></div>
                     </div>
-                    <img class="man top-[25%] sm:top-[40%] xl:top-[-350%]" src="./src/images/man.png" alt="man-meditating">
-                
-                
+
+                </div>
+                <img class="man top-[25%] sm:top-[40%] xl:top-[-350%]" src="./src/images/man.png" alt="man-meditating">
             </div>
 
-            <div class="content py-16 xs:py-32 w-full sm:w-[60%] my-auto">
-                <h1 >
-                    <span class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight font-lobster">About </span>
-                    
+            <div class="py-16 xs:py-32 w-full sm:w-[60%] my-auto">
+                <h1>
                     <span
-                        class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Me</span>
+                        class="text-5xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight dark:text-ree font-playfair">About
+                    </span>
+
+                    <span class="text-4xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-playfair">Me</span>
                 </h1>
-                <p class="text-sm md:text-base lg:text-xl font-josefin-sans py-4 md:py-8">
-                    As a skilled MERN Stack Developer, I specialize in transforming abstract concepts into polished, high-performing web applications. My journey, driven by a deep curiosity about the inner workings of web technologies, has evolved into a dedication to creating efficient and user-friendly digital solutions. I am committed to continuous learning, constantly integrating cutting-edge technologies and industry trends into my work. With a robust problem-solving mindset and a keen eye for detail, I excel at delivering resilient and intuitive applications. I thrive in collaborative environments, where creativity and teamwork drive the development process. Embracing new challenges, I aim to push the boundaries of what's possible in web development. Let's work together to create extraordinary web experiences that stand out.
+                <p class="text-sm md:text-base lg:text-xl py-4 md:py-8 font-grotesk">
+                    Hi, I'm Nishant Kumar, a passionate and skilled MERN Stack Web Developer with a keen eye for
+                    creating dynamic and responsive web applications. With proficiency in MongoDB, Express.js, React,
+                    and Node.js, I specialize in building seamless user experiences and robust back-end solutions. My
+                    journey in web development has been driven by a relentless curiosity and a desire to constantly
+                    evolve with the latest technologies. I take pride in my ability to design and implement efficient,
+                    scalable, and maintainable code. Whether it's crafting a responsive navigation bar, developing
+                    complex full-stack applications, or optimizing existing projects, I thrive on solving challenges and
+                    delivering high-quality work. I am committed to continuous learning and staying updated with
+                    industry trends, ensuring that I bring the best practices to every project. Let's connect and create
+                    something amazing together!
+
+
                 </p>
                 <a href="#about">
                     <button
-                        class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-highlight font-bold transition-all duration-500 text-highlight hover:text-navy-blue hover:bg-highlight">
+                        class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-full border-highlight dark:border-ree font-bold transition-all duration-300 text-highlight dark:text-ree hover:text-navy-blue dark:hover:text-sky-50 hover:bg-highlight dark:hover:bg-ree">
                         Read More
                     </button>
                 </a>
             </div>
         </section>
 
-        <section id="skills" class="gap-4 bg-navy-blue sm:min-h-screen px-4 sm:px-16 text-white">
-            <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+        <!------------------------------- skills section ---------------------------------->
+
+        <section id="skills" class="gap-4 bg-navy-blue dark:bg-sky-50 sm:min-h-screen px-4 sm:px-16 text-white dark:text-black">
+            <h1 class="text-4xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-playfair text-center">
                 My
                 <span
-                    class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight font-lobster">Skills</span>
+                    class="text-5xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight dark:text-ree font-playfair">Skills</span>
             </h1>
             <div class="skills-container flex-col lg:flex-row">
                 <div class="skills">
-                    <div class="technical-skills bg-slate-800 p-6 my-14 rounded-lg">
+                    <div class="bg-slate-800 dark:bg-sky-100 p-6 my-14 rounded-lg">
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>Html</h1>
-                                <h1 class=" text-highlight">90%</h1>
+                                <h1 class=" text-highlight dark:text-ree">90%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 90%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 90%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>CSS</h1>
-                                <h1 class=" text-highlight">80%</h1>
+                                <h1 class=" text-highlight dark:text-ree">80%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 80%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 80%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>JavaScript</h1>
-                                <h1 class=" text-highlight">83%</h1>
+                                <h1 class=" text-highlight dark:text-ree">83%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 83%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 83%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>React Js.</h1>
-                                <h1 class=" text-highlight">85%</h1>
+                                <h1 class=" text-highlight dark:text-ree">85%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 85%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 85%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>tailwind</h1>
-                                <h1 class=" text-highlight">88%</h1>
+                                <h1 class=" text-highlight dark:text-ree">88%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 88%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 88%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>Redux</h1>
-                                <h1 class=" text-highlight">82%</h1>
+                                <h1 class=" text-highlight dark:text-ree">82%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 82%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 82%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>MongoDB</h1>
-                                <h1 class=" text-highlight">85%</h1>
+                                <h1 class=" text-highlight dark:text-ree">85%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 85%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 85%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>Node Js.</h1>
-                                <h1 class=" text-highlight">89%</h1>
+                                <h1 class=" text-highlight dark:text-ree">89%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 89%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 89%;"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="flex justify-between">
                                 <h1>Java</h1>
-                                <h1 class=" text-highlight">80%</h1>
+                                <h1 class=" text-highlight dark:text-ree">80%</h1>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress" style="--progress-width: 80%;"></div>
+                            <div class="progress-bar dark:bg-white">
+                                <div class="progress bg-highlight dark:bg-ree" style="--progress-width: 80%;"></div>
                             </div>
                         </div>
                     </div>
@@ -237,202 +261,211 @@
 
                 <div class="circular-skills">
                     <div class="circular-skill">
-                        <div class="circle" style="--percentage: 90;">
-                            <h2 class="s-number font-josefin-sans font-bold">90 <span>%</span></h2>
+                        <div class="circle dark:bg-dark-circle" style="--percentage: 90;">
+                            <h2 class="s-number font-bona font-bold dark:text-black">90 <span>%</span></h2>
                         </div>
-                        <p>Team Work</p>
+                        <p class="font-bona">Team Work</p>
                     </div>
                     <div class="circular-skill ml-28">
                         <div class="circle" style="--percentage: 85;">
-                            <h2 class="s-number font-josefin-sans font-bold">85 <span>%</span></h2>
+                            <h2 class="s-number font-bona font-bold dark:text-black">85 <span>%</span></h2>
                         </div>
-                        <p>Creativity</p>
+                        <p class="font-bona">Creativity</p>
                     </div>
                     <div class="circular-skill">
                         <div class="circle" style="--percentage: 87;">
-                            <h2 class="s-number font-josefin-sans font-bold">87 <span>%</span></h2>
+                            <h2 class="s-number font-bona font-bold dark:text-black">87 <span>%</span></h2>
                         </div>
-                        <p>Problem Solving</p>
+                        <p class="font-bona">Problem Solving</p>
                     </div>
                     <div class="circular-skill ml-28">
                         <div class="circle" style="--percentage: 80;">
-                            <h2 class="s-number font-josefin-sans font-bold">80 <span>%</span></h2>
+                            <h2 class="s-number font-bona font-bold dark:text-black">80 <span>%</span></h2>
                         </div>
-                        <p>Communication</p>
+                        <p class="font-bona">Communication</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!--------------------------------- Services Section ------------------------------------->
+
         <section id="services"
-            class="flex flex-col gap-4 sm:flex-row bg-navy-blue sm:min-h-screen px-4 sm:px-16 text-white">
-            <div class="content py-16 xs:py-32 w-full my-auto">
-                <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            class="flex flex-col gap-4 sm:flex-row bg-navy-blue dark:bg-sky-50 sm:min-h-screen px-4 sm:px-16 text-white dark:text-black">
+            <div class="py-16 xs:py-32 w-full my-auto">
+                <h1 class="text-4xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-playfair text-center">
                     My
                     <span
-                        class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight font-lobster">Services</span>
+                        class="text-5xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight dark:text-ree font-playfair">Services</span>
                 </h1>
                 <div class="flex flex-wrap lg:flex-nowrap gap-6 my-12">
-                    <article class="article-box bg-slate-800 p-4 rounded">
-                        <i class="fas fa-code text-5xl xs:text-5xl text-highlight"></i>
-                        <h2 class="text-4xl xs:text-4xl mt-4 font-josefin-sans">
+                    <article class="article-box bg-slate-800 dark:bg-sky-100 p-4 rounded flex flex-col items-center text-center">
+                        <i class="fas fa-code text-5xl xs:text-5xl text-highlight dark:text-ree"></i>
+                        <h2 class="text-4xl xs:text-4xl mt-4 font-bona">
+                            Web Development
+                        </h2>
+                        <p class="my-4 text-justify font-grotesk">
+                            I create custom websites that meet your specific needs, combining great design and
+                            functionality. I build attractive and efficient websites that are easy to use. Whether you
+                            need a new website, additional features, or backend development, I ensure everything works
+                            smoothly on all devices. My goal is to bring your vision to life with creative and
+                            dependable web development solutions that deliver results and provide an excellent user
+                            experience.
+                        </p>
+                        <a href="https://trainings.internshala.com/s/v/3353876/3b53e4fe" target="_blank">
+                            <button
+                                class="border-2 py-1 px-2 mx-auto xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-full border-highlight font-bold transition-all duration-300 text-highlight hover:text-navy-blue hover:bg-highlight dark:border-ree dark:text-ree dark:hover:text-sky-50 dark:hover:bg-ree">
+                                Read More
+                            </button>
+                        </a>
+                    </article>
+                    <article class="article-box bg-slate-800 dark:bg-sky-100 p-4 rounded flex flex-col items-center text-center">
+                        <i class="fas fa-paint-brush text-5xl xs:text-5xl text-highlight dark:text-ree"></i>
+                        <h2 class="text-4xl xs:text-4xl mt-4 font-bona">
                             Web Design
                         </h2>
-                        <p class="my-4 text-justify">
-                            I offer bespoke web design services to suit your specific needs. With a keen eye for detail and a flair for creativity, I craft visually captivating and highly functional websites that engage visitors and achieve results. Whether you need a complete overhaul or a new design, I guarantee a seamless and intuitive user experience. My focus on responsive design ensures your site looks outstanding and performs perfectly on all devices. Trust me to bring your vision to life with professional and innovative web design solutions.
+                        <p class="my-4 text-justify font-grotesk">
+                            I offer custom web design services to meet your unique needs. I create visually appealing
+                            and highly functional websites that engage visitors and deliver results. Whether you need a
+                            complete redesign or a new design, I ensure a seamless and user-friendly experience. My
+                            responsive designs look great and work well on all devices. Trust me to bring your vision to
+                            life with professional and innovative web design solutions.
                         </p>
-                        <a href="https://trainings.internshala.com/s/v/3353876/3b53e4fe"
-                            target="_blank">
+                        <a href="https://trainings.internshala.com/s/v/3353876/3b53e4fe" target="_blank">
                             <button
-                                class="border-2 py-1 px-2 mx-auto xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-highlight font-bold transition-all duration-500 text-highlight hover:text-navy-blue hover:bg-highlight">
+                                class="border-2 py-1 px-2 mx-auto xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-full border-highlight font-bold transition-all duration-300 text-highlight hover:text-navy-blue hover:bg-highlight dark:border-ree dark:text-ree dark:hover:text-sky-50 dark:hover:bg-ree">
                                 Read More
                             </button>
                         </a>
                     </article>
-                    <article class="article-box bg-slate-800 hover:shadow-glow p-4 rounded">
-                        <i class="fas fa-paint-brush text-5xl xs:text-5xl text-highlight"></i>
-                        <h2 class="text-4xl xs:text-4xl mt-4 font-josefin-sans">
-                            Web Developement
-                        </h2>
-                        <p class="my-4 text-justify">
-                            I deliver custom web development services tailored to your precise needs. Balancing both design and functionality, I build websites that are not only attractive but also efficient and easy to use. Whether you require a custom website, new features, or backend development, I ensure a smooth and responsive experience on all devices. My mission is to realize your vision through creative and reliable web development solutions that produce results and offer an outstanding user experience.
-                        </p>
-                        <a href="https://trainings.internshala.com/s/v/3353876/3b53e4fe"
-                            target="_blank">
-                            <button
-                                class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-highlight font-bold transition-all duration-500 text-highlight hover:text-navy-blue hover:bg-highlight">
-                                Read More
-                            </button>
-                        </a>
-                    </article>
-                    <article class="article-box bg-slate-800 hover:shadow-glow p-4 rounded">
-                        <i class="fas fa-database text-5xl xs:text-5xl text-highlight"></i>
-                        <h2 class="text-4xl xs:text-4xl mt-4 font-josefin-sans">
+                    <article class="article-box bg-slate-800 dark:bg-sky-100 p-4 rounded flex flex-col items-center text-center">
+                        <i class="fas fa-database text-5xl xs:text-5xl text-highlight dark:text-ree"></i>
+                        <h2 class="text-4xl xs:text-4xl mt-4 font-bona">
                             Database
                         </h2>
-                        <p class="my-4 text-justify">
-                            I provide bespoke database services to match your precise requirements. With expertise in database design, management, and optimization, I ensure your data remains organized, secure, and easily accessible. Whether you need database development, data migration, or performance tuning, I deliver custom solutions that enhance efficiency and support your business objectives. My focus is on implementing robust and scalable database systems that ensure reliable and high-performance data management, facilitating smooth and effective operations.
+                        <p class="my-4 text-justify font-grotesk">
+                            I present custom database services to meet your exact needs. With skills in database design,
+                            management, and optimization, I keep your data organized, secure, and easy to access.
+                            Whether you need database development, data migration, or performance tuning, I provide
+                            solutions that improve efficiency and support your business goals. I focus on creating
+                            strong and scalable database systems that ensure reliable and high-performance data
+                            management, making your operations smooth and effective.
                         </p>
-                        <a href="https://trainings.internshala.com/s/v/3353876/3b53e4fe"
-                            target="_blank">
+                        <a href="https://trainings.internshala.com/s/v/3353876/3b53e4fe" target="_blank">
                             <button
-                                class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-highlight font-bold transition-all duration-500 text-highlight hover:text-navy-blue hover:bg-highlight">
+                                class="border-2 py-1 px-2 mx-auto xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-full border-highlight font-bold transition-all duration-300 text-highlight hover:text-navy-blue hover:bg-highlight dark:border-ree dark:text-ree dark:hover:text-sky-50 dark:hover:bg-ree">
                                 Read More
                             </button>
                         </a>
                     </article>
+
+
                 </div>
             </div>
         </section>
 
-        <!---------------------------- projects ----------------------->
+        <!---------------------------- projects section ----------------------->
 
         <section id="projects"
-            class="flex flex-col gap-4 sm:flex-row bg-navy-blue sm:min-h-screen px-4 sm:px-16 text-white">
-            <div class="content py-16 xs:py-32 w-full my-auto">
-                <h1 class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight font-lobster">
-                    Projects
-                    <!-- <span
-                        class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-glow font-roboto-slab">Projects</span> -->
+            class="flex flex-col gap-4 sm:flex-row bg-navy-blue dark:bg-sky-50 sm:min-h-screen px-4 sm:px-16 text-white dark:text-black">
+            <div class="py-16 xs:py-32 w-full my-auto">
+                <h1 class="text-4xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-playfair text-center">
+                    Latest
+                    <span
+                        class="text-5xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight dark:text-ree font-playfair">Projects</span>
                 </h1>
-                <div class="projects flex flex-wrap justify-center gap-6 my-10">
-                    <article class="img-container">
-                        <img src="./src/images/projects-img/p1.jpg" style="width: 25rem" class="art-img" alt="about" />
-                        <div class="overlay overlay-left">
-                            <div class="project-content">
-                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-roboto-slab">
+                <div class="flex flex-wrap justify-center gap-6 my-10">
+                    <article class="project-img">
+                        <img src="./src/images/projects-img/p1.jpg" style="width: 25rem" alt="about" />
+                        <div class="layer layer-a">
+                            <div class="content">
+                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-bona font-bold">
                                     Secret Project
                                 </h3>
                                 <div class="flex justify-center">
-                                    <button
-                                        class="border-2 text-sm xs:text-xl py-1 px-2 xs:px-2 md:px-6 rounded-sm border-slate-800 my-2 font-bold transition-all duration-500 hover:bg-slate-800 text-slate-800 hover:text-highlight">
-                                        Visit It
-                                    </button>
+                                    <i
+                                        class="fas fa-external-link-alt cursor-pointer text-2xl xs:text-xl my-2 font-bold transition-all duration-300 text-slate-800 hover:scale-130"></i>
+
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="img-container">
-                        <img src="./src/images/projects-img/p2.jpg" style="width: 25rem" class="art-img" alt="about" />
-                        <div class="overlay overlay-left">
-                            <div class="project-content">
-                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-roboto-slab">
+                    <article class="project-img">
+                        <img src="./src/images/projects-img/p2.jpg" style="width: 25rem" alt="about" />
+                        <div class="layer layer-a">
+                            <div class="content">
+                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-bona font-bold">
                                     Slack
                                 </h3>
                                 <div class="flex justify-center">
-                                    <button
-                                        class="border-2 text-sm xs:text-xl py-1 px-2 xs:px-2 md:px-6 rounded-sm border-slate-800 my-2 font-bold transition-all duration-500 hover:bg-slate-800 text-slate-800 hover:text-highlight">
-                                        Visit It
-                                    </button>
+                                    <i
+                                        class="fas fa-external-link-alt cursor-pointer text-2xl xs:text-xl my-2 font-bold transition-all duration-300 text-slate-800 hover:scale-130"></i>
+
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="img-container">
-                        <img src="./src/images/projects-img/p3.jpg" style="width: 25rem" class="art-img" alt="about" />
-                        <div class="overlay overlay-left">
-                            <div class="project-content">
-                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-roboto-slab">
+                    <article class="project-img">
+                        <img src="./src/images/projects-img/p3.jpg" style="width: 25rem" alt="about" />
+                        <div class="layer layer-a">
+                            <div class="content">
+                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-bona font-bold">
                                     Stock Exchange
                                 </h3>
                                 <div class="flex justify-center">
-                                    <button
-                                        class="border-2 text-sm xs:text-xl py-1 px-2 xs:px-2 md:px-6 rounded-sm border-slate-800 my-2 font-bold transition-all duration-500 hover:bg-slate-800 text-slate-800 hover:text-highlight">
-                                        Visit It
-                                    </button>
+                                    <i
+                                        class="fas fa-external-link-alt cursor-pointer text-2xl xs:text-xl my-2 font-bold transition-all duration-300 text-slate-800 hover:scale-130"></i>
+
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="img-container">
-                        <img src="./src/images/projects-img/p4.jpg" style="width: 25rem" class="art-img" alt="about" />
-                        <div class="overlay overlay-left">
-                            <div class="project-content">
-                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-roboto-slab">
+                    <article class="project-img">
+                        <img src="./src/images/projects-img/p4.jpg" style="width: 25rem" alt="about" />
+                        <div class="layer layer-a">
+                            <div class="content">
+                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-bona font-bold">
                                     Neuralink
                                 </h3>
                                 <div class="flex justify-center">
-                                    <button
-                                        class="border-2 text-sm xs:text-xl py-1 px-2 xs:px-2 md:px-6 rounded-sm border-slate-800 my-2 font-bold transition-all duration-500 hover:bg-slate-800 text-slate-800 hover:text-highlight">
-                                        Visit It
-                                    </button>
+                                    <i
+                                        class="fas fa-external-link-alt cursor-pointer text-2xl xs:text-xl my-2 font-bold transition-all duration-300 text-slate-800 hover:scale-130"></i>
+
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="img-container">
-                        <img src="./src/images/projects-img/p5.jpg" style="width: 25rem" class="art-img" alt="about" />
-                        <div class="overlay overlay-left">
-                            <div class="project-content">
-                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-roboto-slab">
+                    <article class="project-img">
+                        <img src="./src/images/projects-img/p5.jpg" style="width: 25rem" alt="about" />
+                        <div class="layer layer-a">
+                            <div class="content">
+                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-bona font-bold">
                                     satellite
                                 </h3>
                                 <div class="flex justify-center">
-                                    <button
-                                        class="border-2 text-sm xs:text-xl py-1 px-2 xs:px-2 md:px-6 rounded-sm border-slate-800 my-2 font-bold transition-all duration-500 hover:bg-slate-800 text-slate-800 hover:text-highlight">
-                                        Visit It
-                                    </button>
+                                    <i
+                                        class="fas fa-external-link-alt cursor-pointer text-2xl xs:text-xl my-2 font-bold transition-all duration-300 text-slate-800 hover:scale-130"></i>
+
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <article class="img-container">
-                        <img src="./src/images/projects-img/p6.jpg" style="width: 25rem" class="art-img" alt="about" />
-                        <div class="overlay overlay-left">
-                            <div class="project-content">
-                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-roboto-slab">
+                    <article class="project-img">
+                        <img src="./src/images/projects-img/p6.jpg" style="width: 25rem" alt="about" />
+                        <div class="layer layer-a">
+                            <div class="content">
+                                <h3 class="text-slate-800 text-center text-xl xs:text-xl font-bona font-bold">
                                     Humanoid Robot
                                 </h3>
                                 <div class="flex justify-center">
-                                    <button
-                                        class="border-2 text-sm xs:text-xl py-1 px-2 xs:px-2 md:px-6 rounded-sm border-slate-800 my-2 font-bold transition-all duration-500 hover:bg-slate-800 text-slate-800 hover:text-highlight">
-                                        Visit It
-                                    </button>
+                                    <i
+                                        class="fas fa-external-link-alt cursor-pointer text-2xl xs:text-xl my-2 font-bold transition-all duration-300 text-slate-800 hover:scale-130"></i>
+
                                 </div>
                             </div>
                         </div>
@@ -442,107 +475,117 @@
         </section>
 
 
-        <!------------------ contact ----------------------->
+        <!------------------ contact section ----------------------->
 
         <section id="contact"
-            class="contact flex flex-col gap-4 sm:flex-row bg-navy-blue sm:min-h-screen px-4 sm:px-16 text-white">
-            <div class="content py-16 xs:py-32 w-full my-auto">
-                <h1 >
-                    <span class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight font-lobster">Contact </span>
-                    
+            class="flex flex-col gap-4 sm:flex-row bg-navy-blue dark:bg-sky-50 sm:min-h-screen pb-[10%] px-4 sm:px-16 text-white dark:text-black">
+            <div class="py-16 xs:py-32 w-full my-auto">
+                <h1 class="text-center">
                     <span
-                    class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Me</span>
+                        class="text-5xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-highlight dark:text-ree font-playfair">Contact
+                    </span>
+                    <span class="text-4xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-playfair">Me</span>
                 </h1>
                 <form action="" class="my-8 flex flex-col sm:gap-2">
                     <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                        <input type="text" class="sm:w-[50%] py-2 px-4 sm:py-4 sm:px-6 bg-slate-700 outline-none"
-                            required placeholder="First Name" />
-                        <input type="text" class="sm:w-[50%] py-2 px-4 sm:py-4 sm:px-6 bg-slate-700 outline-none"
-                            required placeholder="Last Name" />
+                        <div class="flex flex-col sm:w-[50%]">
+                            <label for="first-name" class="text-sm sm:text-base mb-1">First Name</label>
+                            <input type="text" id="first-name" name="first-name"
+                                class="py-2 px-4 sm:py-4 sm:px-6 bg-slate-700 dark:bg-sky-100 outline-none" required />
+                        </div>
+                        <div class="flex flex-col sm:w-[50%]">
+                            <label for="last-name" class="text-sm sm:text-base mb-1">Last Name</label>
+                            <input type="text" id="last-name" name="last-name"
+                                class="py-2 px-4 sm:py-4 sm:px-6 bg-slate-700 dark:bg-sky-100 outline-none" required />
+                        </div>
                     </div>
                     <div class="flex flex-col gap-4 sm:gap-6 sm:flex-row py-4">
-                        <input type="email" class="py-2 px-4 sm:py-4 sm:px-6 sm:w-[50%] bg-slate-700 outline-none"
-                            required placeholder="Email" />
-                        <input type="number" class="py-2 px-4 sm:py-4 sm:px-6 sm:w-[50%] bg-slate-700 outline-none"
-                            required placeholder="Mobile Number" />
+                        <div class="flex flex-col sm:w-[50%]">
+                            <label for="email" class="text-sm sm:text-base mb-1">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="py-2 px-4 sm:py-4 sm:px-6 bg-slate-700 dark:bg-sky-100 outline-none" required />
+                        </div>
+                        <div class="flex flex-col sm:w-[50%]">
+                            <label for="mobile-number" class="text-sm sm:text-base mb-1">Mobile Number</label>
+                            <input type="number" id="mobile-number" name="mobile-number"
+                                class="py-2 px-4 sm:py-4 sm:px-6 bg-slate-700 dark:bg-sky-100 outline-none" required />
+                        </div>
                     </div>
-                    <textarea name="" rows="6" class="py-2 px-4 sm:py-4 sm:px-6 w-[100%] bg-slate-700 outline-none"
-                        id=""></textarea>
+                    <div class="flex flex-col w-[100%]">
+                        <label for="message" class="text-sm sm:text-base mb-1">Message</label>
+                        <textarea name="message" id="message" rows="6"
+                            class="py-2 px-4 sm:py-4 sm:px-6 bg-slate-700 dark:bg-sky-100 outline-none" required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="mx-auto border-2 mt-4 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-full border-highlight font-bold transition-all duration-300 text-cyan-300 hover:text-navy-blue hover:bg-highlight dark:border-ree dark:text-ree dark:hover:text-sky-50 dark:hover:bg-ree">
+                        Send Message
+                    </button>
                 </form>
-                <button type=""
-                    class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-highlight font-bold transition-all duration-500 text-cyan-300 hover:text-navy-blue hover:bg-highlight">
-                    Send Message
-                </button>
             </div>
         </section>
-
-
     </main>
 
+    <!------------------------- Footer -------------------------->
+
     <footer class="footer bg-navy-blue">
-        <div class="waves">
-          <div class="wave" id="wave1"></div>
-          <div class="wave" id="wave2"></div>
-          <div class="wave" id="wave3"></div>
-          <div class="wave" id="wave4"></div>
+        <div>
+            <div class="stream" id="stream1"></div>
+            <div class="stream" id="stream2"></div>
+            <div class="stream" id="stream3"></div>
+            <div class="stream" id="stream4"></div>
         </div>
         <ul class="social-icon">
-          <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/nishant-kumar-2235b21a4/" target="_blank">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/Nishantkumar7" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="mailto:niskum2002@gmail.com" target="_blank">
-              <ion-icon name="mail-outline"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
+            <li class="social-item"><a class="social-link" href="https://www.linkedin.com" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-item"><a class="social-link" href="https://github.com" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a></li>
+            <li class="social-item"><a class="social-link" href="mailto:niskum2002@gmail.com" target="_blank">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a></li>
+            <li class="social-item"><a class="social-link" href="https://www.instagram.com" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            <li class="social-item"><a class="social-link" href="tel:+91 9999999999">
+                    <ion-icon name="call-outline"></ion-icon>
+                </a></li>
         </ul>
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link font-josefin-sans" href="#home">Home</a></li>
-          <li class="menu__item"><a class="menu__link font-josefin-sans" href="#about">About</a></li>
-          <li class="menu__item"><a class="menu__link font-josefin-sans" href="#skills">Skills</a></li>
-          <li class="menu__item"><a class="menu__link font-josefin-sans" href="#services">Services</a></li>
-          <li class="menu__item"><a class="menu__link font-josefin-sans" href="#projects">Projects</a></li>
-          <li class="menu__item"><a class="menu__link font-josefin-sans" href="#contact">Contact</a></li>
-    
+        <ul class="f-nav">
+            <li class="f-item"><a class="f-link font-playfair" href="#home">Home</a></li>
+            <li class="f-item"><a class="f-link font-playfair" href="#about">About</a></li>
+            <li class="f-item"><a class="f-link font-playfair" href="#skills">Skills</a></li>
+            <li class="f-item"><a class="f-link font-playfair" href="#services">Services</a></li>
+            <li class="f-item"><a class="f-link font-playfair" href="#projects">Projects</a></li>
+            <li class="f-item"><a class="f-link font-playfair" href="#contact">Contact</a></li>
+
         </ul>
-        <p class="font-roboto font-bold">Nishant Kumar &copy; All Rights Reserved - 2024</p>
-      </footer>
-    <script src="https://kit.fontawesome.com/fb9969f0bb.js" crossorigin="anonymous"></script>
+        <p class="font-caudex font-bold">Nishant Kumar &copy; All Rights Reserved - 2024</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/6c0afbe74a.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <script>
-    let toggle = true;
-    const handletoggle = () => {
-      if (toggle) {
-        document.getElementById(
-          "toggle"
-        ).innerHTML = `<i class="fas fa-times"></i>`;
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navItem = document.getElementById('navItem');
+        const darktheme = document.getElementById('darktheme');
 
-        toggle ? (toggle = !toggle) : (toggle = !toggle);
-        document.getElementById("nav").classList.add("h-80");
-        // document.getElementById("themeToggle").classList.add("flex");
-        document.getElementById("themeToggle").style.display = "flex";
-        document.getElementById("navItem").classList.remove("left-[-200px]");
-        document
-          .getElementById("navSearch")
-          .classList.remove("left-[-200px]");
-      } else {
-        document.getElementById(
-          "toggle"
-        ).innerHTML = `<i class="fa fa-solid fa-bars"> </i>`;
-        toggle ? (toggle = !toggle) : (toggle = !toggle);
-        document.getElementById("nav").classList.remove("h-80");
-        document.getElementById("themeToggle").style.display = "none";
-        document.getElementById("navItem").classList.add("left-[-200px]");
-        document.getElementById("navSearch").classList.add("left-[-200px]");
-      }
-    };
-  </script>
+        hamburger.addEventListener('click', () => {
+            navItem.classList.toggle('hidden');
+            darktheme.classList.toggle('hidden');
+        });
+
+        const toggleSwitch = document.getElementById("t-btn");
+
+      toggleSwitch.addEventListener("change", function () {
+        if (this.checked) {
+          document.body.classList.add("dark");
+        } else {
+          document.body.classList.remove("dark");
+        }
+      });
+    </script>
 </body>
 
 </html>
