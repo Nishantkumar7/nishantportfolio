@@ -482,7 +482,13 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    width: 100%; /* Stretch full width of the container */
+    max-width: 25rem; /* Matches the image width */
+    /* padding: 0 1rem; Optional: inner spacing */
+}
+
+.content h6{
+    margin-top: 1.25rem;
 }
 
 .footer {
